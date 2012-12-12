@@ -1,3 +1,4 @@
+abgabe.pdf
 *.acn
 *.acr
 *.alg
@@ -30,3 +31,4 @@
 *.vrb
 *.xdy
 *.tdo
+*.tex.backup
