@@ -596,14 +596,14 @@ it is difficult to provide privacy for the users \cite{koskelaold}.
 
 \subsection{Eclipse Attack}
 \label{eclipse}
-An eclipse attack is more general attack that can be launched against the whole network using one or a combination of some of the attacks previously described.
+An eclipse attack is a more general attack that can be launched against the whole network using one or a combination of some of the attacks previously described.
 In an Eclipse Attack, an attacker tries to mediate most overlay traffic in order to eclipse legit users from each others’ view \cite{touceda}. If an attacker
-can control the users view of the network and all the incomming and outgoing traffic, he can perfom various forms of denail of service attacks. There are
-mutliple ways of performing an eclipse attack, with different combinations of other attacks, but since this paper does not discuss all of these, so we
-limit ourselves to the combination of sybil and ID mapping.
+can control the user's view of the network and all the incoming and outgoing traffic, he can perfom various forms of denial of service attacks. There are
+mutliple ways of performing an eclipse attack, with different combinations of other attacks, but since this paper does not discuss all of these, we
+limit ourselves to the combination of Sybil attacks and ID mapping.
 
 If an attacker can chose its id freely, as described in section \ref{idmap}, it can position itself strategically in the network and appear in the routing
-tables of most of the users, as described in section \ref{sybil}. This means that most of the traffic is routed through the attacker and it can arbitraily deny
+tables of most of the users, as described in section \ref{sybil}. This means that most of the traffic is routed through the attacker and it can arbitrarily deny
 access to data or monitor activities of the users.
 
 \subsection{Spam}
@@ -663,12 +663,22 @@ advantages of a decentralized system.
 \label{relatedwork}
 
 \textsc{Lua et al.} \cite{lua} provide a good survey and comparison of available
-P2P overlay networks and \textsc{Wallach} \cite{wallach} gives an overview of
-security threats
-and attacks of P2P systems.
+P2P overlay networks whereby a general overview of existing P2P systems is given 
+and the difference and performance issues of each of these systems is evaluated. 
+In contrast to our work, where only security issues of structured P2P systems are
+considered, both structured and unstructured systems and their characteristics
+are evaluated. 
+% which are then classified 
+
+\textsc{Wallach} \cite{wallach} gives an overview of security threats and attacks 
+of P2P systems, where various P2P overlay protocols are discussed and evaluated
+in detail. Thereby the focus lies on exhibiting security concerns for each of these
+protocols as well as discussing how to build trust and ensure fairness within 
+the system. In contrast, our work focuses on security implications for VoIP 
+applications. 
 
 \textsc{Germanus et al.} \cite{germanus} investigate possibilites to ameliorate Localized Eclipse Attacks (LEA) on P2P Systems. They propose heuristics to
-asses the suceptibility of various P2P protocols to LEA attacks based on routing mechanisms and topology characteristics. The results can be used to tune the
+assess the susceptibility of various P2P protocols to LEA attacks based on routing mechanisms and topology characteristics. The results can be used to tune the
 parameters of these networks and improve their resilience. The Localized Eclipse Attack is a form of Eclipse Attack described in section \ref{eclipse}.
 
 
