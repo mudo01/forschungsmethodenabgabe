@@ -39,64 +39,21 @@ this paper focuses on threats that require some kind of user interaction.
 \end{abstract}
 
 \section{Introduction}
-%TODO teilweise kann auskommentiert werden aber nicht alles!
-TODO
 
-% VoIP applications face a number of security threats. Unencrypted calls can
-% easily be listened to by an attacker and contact lists or call
-% records can be stolen and used for sending spam or identity theft
-% \cite{koskela}. In a P2P environment, such as the
-% proposed P2PSIP standard, the situation is even worse, because the application
-% has to rely on untrusted and possibly malicious peers to provide the service.
-% Furthermore private data such as offline messages and voice mails have to be
-% stored in the overlay network and therefore on untrusted peers, who can
-% deny access to it or return fake content. Contact information, such as the
-% current ip address of the node, is typically stored in the overlay network as
-% well.
-% Therefore a malicious peer who is responsible for storing that information could
-% log all incoming calls or prevent the user from getting any calls at all
-% \cite{touceda}.
-%
-% There already exist VoIP protocols like Skype, SIP and others, which make use
-% of P2P technologies, but most of them rely on centralized components like
-% the login server
-% of Skype \cite{salman} and the location servers of SIP \cite{touceda}. So the
-% security of pure P2P networks is still a very active research area
-% \cite{chopra, % wallach, touceda}.
-%
-% However there are many good reasons for moving towards P2P VoIP, such as high
-% scalability requirements, fault tolerance, government censorship and limited
-% resources to provide the
-% necessary server architecture \cite{touceda}. It is also commonly seen as the
-% next logical step in the evolution of VoIP \cite{koskela}. But great care has
-% to be taken in designing the security measures of these systems.
-%
-% Good security mechanisms are often not enough, because the underlying system
-% as well as its vulnerabilities are so complex, that ordinary users cannot be
-% expected
-% to understand them. Most users are not aware of the threats and therefore
-% misunderstand the security implications of their actions.
-% So bad usability can lead to users turning off unfriendly security features
-% \cite{toninelli} and is therefore often more detrimental to security than a
-% suboptimal design \cite{koskela}.
-%
-% At a first glance security and usability seem to contradict each other. For
-% example a strong password that is hard to remember is secure but not very
-% usable,
-% especially on a mobile device, and a short password that can be easily
-% remembered is not secure. But the need for usable security is apparent and
-% research
-% in the emerging field of HIC-SEC (Human-Computer Interaction and Security)
-% tries to achieve exactly that \cite{fidas}.
-%
-% Additionally the user interface on mobile devices imposes further restrictions
-% and it is unclear how to best present the complex security issues to the user
-% in an
-% usable manner. Since smart phones are getting increasingly more powerful and
-% popular they also provide more tempting targets for attackers \cite{landman}.
-% This in turn
-% poses new challenges for usable security \cite{toninelli}.
-%
+P2P applications face a number of security threats, because it has
+to rely on untrusted and possibly malicious peers to provide the service.
+
+Furthermore private data such as offline messages and voice mails have to be
+stored in the overlay network and therefore on untrusted peers, who can
+deny access to it or return fake content. Contact information, such as the
+current ip address of the node, and other metadata is typically stored in the
+overlay network as well.
+
+In the case of a P2P VoIP application, a malicious peer who is
+responsible for storing that kind of information could log all incoming calls or
+prevent the user from getting any calls at all
+\cite{touceda}.
+
 % In section \ref{relatedwork} related work is discussed and
 % section \ref{p2p} gives an overview of P2P VoIP in general and of a selection
 % of possible attacks. \textsc{Touceda et al.} \cite{touceda} provide a recent
@@ -113,37 +70,11 @@ TODO
 
 \section{Related Work}
 \label{relatedwork}
-%TODO vielleicht kann etwas von unten verwendet werden
-TODO
-% \textsc{Fidas et al.} \cite{fidas} propose a user-centric approach as a new
-% promising research direction for usable security. They use the classical
-% password management
-% problem to demonstrate their approach. User-centric means in this context that
-% security should protect the user and not the assets of the provider.
-% \textsc{Becher et al.} \cite{becher} discuss the recent developments in smart
-% phone security and give an overview of different attack vectors. Furthermore
-% they
-% analyse the difference between smart phone security and ``normal'' security.
-% Since this paper analyses the security P2P VoIP on smart phones and its
-% usability it
-% could be seen as a special case of their paper.
-% \textsc{Landman} \cite{landman} studies the need for corporate security policies
-% on smart phones, because people tend to use their increasingly powerful phones
-% for both business and
-% private uses, which may become a problem if sensitive corporate data is stored
-% on the phone. For this purpose socially aware policies, discussed later in this
-% paper, could be used.
-% \textsc{Lua et al.} \cite{lua} provide a good survey and comparison of available
-% P2P overlay networks and \textsc{Wallach} \cite{wallach} gives an overview of
-% security threats
-% and attacks of P2P systems.
-% \textsc{Ongtang et al.} \cite{ongtang} argue, that the security interface
-% available to applications on the Android OS is inadequate and they propose a
-% semantically richer alternative called ``Saint''.
-% \textsc{Kainda et al.} \cite{kainda} try to give an overview over current
-% research in the field of usable security and they try to draw the line between
-% the two related fields of HCI (Human Computer Interaction) and
-% HCISec (HCI and Security), which is difficult because their goals are similar.
+
+\textsc{Lua et al.} \cite{lua} provide a good survey and comparison of available
+P2P overlay networks and \textsc{Wallach} \cite{wallach} gives an overview of
+security threats
+and attacks of P2P systems.
 
 \section{Security Threats for P2P VoIP}
 \label{p2p}
@@ -330,9 +261,6 @@ notice a difference to a normal call, but a spam bot cannot afford to lose those
 seconds per call.
 This approach is already known to work well with emails.
 
-%\subsubsection{Reputation Systems}
-
-
 \subsubsection{Turing Tests}
 To ensure that a human being is behind every call turing tests or CAPTCHAs can
 be used. These tests challenge the caller to do something
@@ -357,6 +285,23 @@ the amounts would be very small the accumulated cost of calling thousands of
 people would make SPIT very expensive. It is not clear how this money transfer
 can reliably work without contacting a central server and thereby losing the
 advantages of a decentralized system.
+
+\section{Conclusion}
+\label{conclusion}
+In this paper a brief introduction into P2P overlay networks, in reference to
+P2P VoIP, was given and a summary of some of the attacks, that could exploit
+this
+architecture followed. Then the usability implications of the defenses and
+recent developments in the field of usable security were discussed. It seems,
+that
+the advantages of a P2P architecture, like scalability and fault tolerance, come
+at a price, because the dependence on untrusted peers leaves the user
+vulnerable to attacks. Securing P2P networks is a difficult task and an active
+field of research. Most of the scientific literature agrees, that at least
+some form of central certificate authority, that performs admission control, is
+necessary to prevent an attacker from choosing its id freely or get an unlimited
+number of fake ids. This measure mitigates many attacks and strengthens the
+effectiveness of reputation and social link systems.
 
 \bibliographystyle{plain}
 \bibliography{references}
