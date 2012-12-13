@@ -413,19 +413,33 @@ we focuses on only a selection of possible attacks.
 
 \section{Introduction}
 
-P2P applications face a number of security threats, because it has
+P2P systems have become a popular network infrastructure which is often considered
+an alternative for centralized client server approaches. Because of its decentralized
+nature a P2P system is favoured for its scalability and fault tolerance characteristics. 
+It can be applied in a variety of contexts and applications, of which the most well known
+are filesharing applications. Another demanding area of application are VoIP systems 
+which present a suitable use case for P2P systems with respect to scalability and 
+fault tolerance. 
+
+In order for P2P systems to be protected from attacks security considerations need to be taken into account. 
+P2P applications face a number of security threats, because they have
 to rely on untrusted and possibly malicious peers to provide the service.
 
-Furthermore private data such as offline messages and voice mails have to be
+In case of VoIP applications private data such as offline messages and voice mails have to be
 stored in the overlay network and therefore on untrusted peers, who can
 deny access to it or return fake content. Contact information, such as the
 current ip address of the node, and other metadata is typically stored in the
 overlay network as well.
 
-In the case of a P2P VoIP application, a malicious peer who is
+Furthermore, a malicious peer who is
 responsible for storing that kind of information could log all incoming calls or
 prevent the user from getting any calls at all
 \cite{touceda}.
+
+There are numerous attacks that can compromise the integrity, confidentiality and availability 
+of P2P network content, some of which will be presented in this paper. In addition countermeasures
+presented in literature will be mentioned that can mitigate or even avoid these attacks. 
+
 
 % In section \ref{relatedwork} related work is discussed and
 % section \ref{p2p} gives an overview of P2P VoIP in general and of a selection
@@ -674,8 +688,10 @@ are evaluated.
 of P2P systems, where various P2P overlay protocols are discussed and evaluated
 in detail. Thereby the focus lies on exhibiting security concerns for each of these
 protocols as well as discussing how to build trust and ensure fairness within 
-the system. In contrast, our work focuses on security implications for VoIP 
-applications. 
+the system. In contrast, our work focuses mainly on security
+implications of VoIP applications.
+%In contrast, in our work the focus lies mainly on security implications of VoIP 
+%applications. 
 
 \textsc{Germanus et al.} \cite{germanus} investigate possibilites to ameliorate Localized Eclipse Attacks (LEA) on P2P Systems. They propose heuristics to
 assess the susceptibility of various P2P protocols to LEA attacks based on routing mechanisms and topology characteristics. The results can be used to tune the
